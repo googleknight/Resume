@@ -7,7 +7,7 @@ This is my resume developed using [**Awesome CV**](https://github.com/posquit0/A
 ## Preview
 You can see [PDF](https://raw.githubusercontent.com/googleknight/Resume/master/Shubham_Mathur.pdf)
 
-![alt tag](https://raw.githubusercontent.com/googleknight/Resume/master/Shubham_Mathur-1.jpg)
+![alt tag](https://raw.githubusercontent.com/googleknight/Resume/master/Shubham_Mathur-1.png)
 
 ## Quick Start
 
