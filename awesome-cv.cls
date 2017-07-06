@@ -46,6 +46,7 @@
 %-------------------------------------------------------------------------------
 %                3rd party packages
 %-------------------------------------------------------------------------------
+
 % Needed to make fixed length table
 \RequirePackage{array}
 % Needed to handle list environment
@@ -109,7 +110,7 @@
 %% Page Layout
 % Configure page margins with geometry
 %\geometry{left=2.0cm, top=1.5cm, right=2.0cm, bottom=2.0cm, footskip=.5cm}
-\geometry{left=1.4cm, top=1.4cm, right=1.4cm, bottom=1.4cm, footskip=.5cm}
+\geometry{left=1.5cm, top=1.5cm, right=1.5cm, bottom=1.5cm, footskip=.5cm}
 %% Header & Footer
 % Set offset to each header and offset
 \fancyhfoffset{0em}
@@ -151,6 +152,8 @@
 \definecolor{awesome-concrete}{HTML}{95A5A6}
 \definecolor{awesome-darknight}{HTML}{131A28}
 \colorlet{awesome}{awesome-red}
+
+\definecolor{darkred}{HTML}{ad1414}
 
 % Awesome section color
 \newcounter{colorCounter}
@@ -233,7 +236,7 @@
 
 % For elements of entry
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\color{graytext} #1}}
 \newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
