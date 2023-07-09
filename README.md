@@ -1,13 +1,10 @@
-# Résumé [![Example](https://img.shields.io/badge/Résumé-pdf-green.svg)](https://raw.githubusercontent.com/googleknight/Resume/master/Shubham_Mathur_Resume.pdf)
-
-
-This is my resume developed using [**Awesome CV**](https://github.com/posquit0/Awesome-CV) which is LaTeX template for a **CV(Curriculum Vitae)** or **resume** or **cover letter** inspired by [Fancy CV](https://www.sharelatex.com/templates/cv-or-resume/fancy-cv). It is easy to customize your own template, especially since it is really written by a clean, semantic markup.
+# Résumé [![Example](https://img.shields.io/badge/Résumé-pdf-green.svg)](https://raw.githubusercontent.com/googleknight/Resume/master/Shubham-Mathur-Senior-Engineer-Resume.pdf)
 
 
 ## Preview
-You can see [PDF](https://raw.githubusercontent.com/googleknight/Resume/master/Shubham_Mathur_Resume.pdf)
+You can see [PDF](https://raw.githubusercontent.com/googleknight/Resume/master/Shubham-Mathur-Senior-Engineer-Resume.pdf)
 
-![alt tag](https://raw.githubusercontent.com/googleknight/Resume/master/Shubham_Mathur_Resume.png)
+![alt tag](https://raw.githubusercontent.com/googleknight/Resume/master/Shubham-Mathur-Senior-Engineer-Resume.png)
 
 ## Quick Start
 
