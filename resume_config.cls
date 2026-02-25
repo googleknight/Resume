@@ -24,9 +24,10 @@
 \RequirePackage{enumitem}
 \RequirePackage{multicol}
 \RequirePackage{pifont}
-\RequirePackage{fontawesome5}
+
 \RequirePackage{fancyhdr}
-\RequirePackage[usenames,dvipsnames]{xcolor}
+\RequirePackage[dvipsnames]{xcolor}
+
 \RequirePackage{etoolbox,refcount}
 \RequirePackage{calc}
 \RequirePackage{enumitem}
@@ -39,7 +40,14 @@
 \usepackage{graphicx}
 
 
-\setmainfont{TeX Gyre Heros} % adjust font style here
+\setmainfont{texgyreheros}[
+  UprightFont = *-regular,
+  BoldFont = *-bold,
+  ItalicFont = *-italic,
+  BoldItalicFont = *-bolditalic,
+  Extension = .otf
+]
+
 
 % Additional fonts can be found at the following URL: https://www.draketo.de/anderes/latex-fonts.html#org9f59ea3
 
@@ -56,15 +64,14 @@
 \raggedright
 
 \geometry{
-    paper=a4paper, % Paper size, change to letterpaper for US letter size
-    top=0.1in, % Top margin
-    bottom=0.1in, % Bottom margin
-    left=0.3in, % Left margin
-    right=0.3in, % Right margin
-    headheight=0.75cm, % Header height
-    footskip=1cm, % Space from the bottom margin to the baseline of the footer
-    headsep=0.5cm % Space from the top margin to the baseline of the header
-% showframe, % Uncomment to show how the type block is set on the page
+    paper=a4paper,
+    top=0.25in, 
+    bottom=0.25in,
+    left=0.3in, 
+    right=0.3in, 
+    headheight=0.5cm,
+    footskip=0.3cm,
+    headsep=0.3cm
 }
 
 % section title format
@@ -86,18 +93,21 @@
 }
 
 
-\NewDocumentCommand{\Header}{m m m m m  }{
+\NewDocumentCommand{\Header}{m m m m m m }{
     \fancyhf{}
     \begin{center}
-        {\Huge\textbf{\textsc{\textcolor{NavyBlue}{#1}}}}\\[4pt]
-        {\large\textbf{\textcolor{NavyBlue}{#2}}}\\[3pt]
+        {\Huge\textbf{\textsc{\textcolor{NavyBlue}{#1}}}}\\[3pt]
         \textcolor{black}{
-            #3 \CustomBullet \href{mailto:#4}{#4} \CustomBullet \href{https://linkedin.com/in/#5}{linkedin.com/in/#5}  
-        }\\[3pt]
+            % Line 1: Phone, Email, LinkedIn
+            #2 \CustomBullet \href{mailto:#3}{#3} \CustomBullet \href{https://linkedin.com/in/#4}{linkedin.com/in/#4}
+        }\\[2pt]
+        \textcolor{black}{
+            % Line 2: GitHub and Portfolio
+            \href{https://github.com/#6}{github.com/#6} \CustomBullet \href{#5}{#5}
+        }
     \end{center}
     \vspace{-15pt}
 }
-
 
 
 \newcommand{\WorkExperience}[5]{

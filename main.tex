@@ -1,0 +1,72 @@
+% !TEX program = xelatex
+\providecommand{\IfDocumentMetadataT}[1]{}
+
+\documentclass[letterpaper]{resume_config}
+
+
+\begin{document}
+
+\Header
+    {Shubham Mathur}
+    {+91-9443129941}
+    {shubham.mathur.wrk@gmail.com}
+    {shubham-mathur-biz}
+    {https://googleknight.github.io/}
+    {googleknight}
+
+\section{\textcolor{NavyBlue}{Work Experience}}
+
+\WorkExperience
+    {\textbf{Senior Software Engineer}}
+    { \href{https://www.vimeo.com}{\textbf{Vimeo}} }
+    {Jan 2024 - Jan 2026}
+    {Remote, India}
+    {
+      \item[$\bullet$] \textbf{Strategic Compliance (Age Assurance):} Led cross-platform compliance strategy for \textbf{4.5M+ users} under the \textbf{UK Online Safety Act} and EU DSA, mitigating revenue risks (10\% of global turnover). Engineered a \textbf{Zero-Trust architecture} that eliminates SPI persistence via vendor-edge filtering, reducing GDPR liability by \textbf{100\%}. Designed ``Exemption Workflows'' to bypass verification for premium users, safeguarding high-value revenue streams from churn.
+      \item[$\bullet$] \textbf{Legacy Modernization Architecture (Identity):} Designed the architectural blueprint for ``Anumati,'' a \textbf{Golang} microservice to decouple authentication from the legacy PHP monolith. Reverse-engineered 15 years of undocumented logic to map the \textbf{Strangler Pattern} migration strategy and implemented core pre/post-login flows to prepare for system decomposition.
+      \item[$\bullet$] \textbf{Backend Scaling (User Deactivation Engine):} Re-architected the deactivation system using \textbf{Domain-Driven Design (DDD)} and \textbf{Asynchronous Queueing}. Scaled bulk processing capacity from 4K to \textbf{50K+ accounts} per batch, resolving HTTP timeouts. Reduced processing time by \textbf{99.9\%} (2 days to under 5 mins) and reconciled \textbf{195K+} inconsistent records.
+      \item[$\bullet$] \textbf{Security \& Observability:} Identified a critical MFA bypass flaw and \textbf{authored the design specification} for a Backup Recovery Code system. Hardened auth flows against XSS and Open Redirect vectors. Defined \textbf{SLOs}, instrumented Grafana dashboards achieving \textbf{0\%} data inconsistencies, and authored source-of-truth \textbf{technical specifications} for Compliance and Auth domains.
+    }
+
+\WorkExperience
+    {\textbf{Engineer 2}}
+    {\href{https://www.mckinsey.com/}{\textbf{McKinsey \& Company}} }
+    {Nov 2021 - Jan 2024}
+    {Bengaluru, India}
+    {
+      \item[$\bullet$] Architected \textbf{GenAI-powered backend services} for enterprise banking IVR, designing secure OpenAI integration layers with PII redaction and stateful conversation orchestration using \textbf{NestJS}.
+      \item[$\bullet$] Built \textbf{event-driven medication adherence platform} using \textbf{Azure Functions and Twilio}, implementing fault-tolerant message routing and scheduling flows with \textbf{HIPAA-compliant} healthcare data handling at scale.
+      \item[$\bullet$] Optimized \textbf{NestJS microservices} serving \textbf{500K+ monthly users}, reducing API response times by \textbf{50\%} through caching and index optimization. Led architecture reviews, mentored 4 engineers, established API design standards, and drove CI/CD adoption across teams.
+    }
+
+\WorkExperience
+    {\textbf{Engineer 1}}
+    { \href{https://www.mckinsey.com/}{\textbf{McKinsey \& Company}} }
+    {Jul 2018 - Nov 2021}
+    {Bengaluru, India}
+    {
+      \item[$\bullet$] Designed \textbf{microservices architecture} for Malaysian banking self-service platform serving \textbf{20M+ customers}, decomposing legacy SOAP integrations into \textbf{REST-based services}. Increased relationship manager productivity by \textbf{60\%} through workflow automation and API modernization.
+      \item[$\bullet$] Developed \textbf{insurance recommendation engine} for \textbf{1.3M users} using React and Node.js, improving operational efficiency by \textbf{90\%}. Built telecom customer platforms for \textbf{10M users}, increasing test coverage by \textbf{40\%} and strengthening session management reliability.
+    }
+
+\section{\textcolor{NavyBlue}{Education}}
+
+\EducationExperience
+    {Vellore Institute of Technology}
+    {\textbf{Bachelor of Technology}, Information Technology}
+    {2018}
+    {Vellore, India}
+
+\section{\textcolor{NavyBlue}{Skills}}
+
+\SkillList{
+    \SkillItem{Languages}{: JavaScript, TypeScript, SQL; \textbf{Familiar:} Go (Golang), PHP, Java, Python}
+    \SkillItem{Frontend}{: React, Next.js, Tailwind, Web Security (CSP/XSS), Jest}
+    \SkillItem{Backend}{: Node.js, NestJS, Express.js; \textbf{Familiar:} Spring Boot, FastAPI}
+    \SkillItem{Databases}{: PostgreSQL, MySQL, Redis, MongoDB; TypeORM}
+    \SkillItem{Cloud \& DevOps}{: Docker, GitHub Actions, CircleCI; \textbf{Familiar:} AWS, Azure, GCP, Kubernetes, Grafana}
+    \SkillItem{Architecture}{: Microservices, DDD, Event-Driven, REST, GraphQL, gRPC, OAuth 2.0, Async Processing, Message Queues}
+    \SkillItem{Open Source}{: Contributed to \href{https://github.com/apple/password-manager-resources/pull/1019}{Apple/password-manager-resources}, \href{https://github.com/transferwise/pipelinewise/pull/1263}{Wise/PipelineWise}, \href{https://github.com/amruthpillai/reactive-resume/pull/1978}{Reactive Resume} (PRs merged)}
+}
+
+\end{document}

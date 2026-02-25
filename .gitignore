@@ -1,1 +1,25 @@
+# LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.xdv
+*.toc
+*.bbl
+*.blg
+*.run.xml
+*.bcf
+
+# Ignore all PDFs except the main resume
+*.pdf
+!Shubham_Mathur_Resume_2026.pdf
+
+# Directory for output if configured
+%OUTDIR%/
+aux/
+build/
+
+# macOS system files
 .DS_Store

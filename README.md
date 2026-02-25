@@ -1,52 +1,65 @@
-# Résumé [![Example](https://img.shields.io/badge/Résumé-pdf-green.svg)](https://raw.githubusercontent.com/googleknight/Resume/master/Shubham-Mathur-Senior-Engineer-Resume.pdf)
+# Shubham Mathur - Resume
 
+This repository contains the LaTeX source code for my professional resume. It is designed to be easily compiled locally into a high-quality PDF.
 
-## Preview
-You can see [PDF](https://raw.githubusercontent.com/googleknight/Resume/master/Shubham-Mathur-Senior-Engineer-Resume.pdf)
+## 📄 View Resume
 
-![alt tag](https://raw.githubusercontent.com/googleknight/Resume/master/Shubham-Mathur-Senior-Engineer-Resume.png)
+You can view or download the latest version of my resume here:  
+👉 **[Shubham_Mathur_Resume_2026.pdf](./Shubham_Mathur_Resume_2026.pdf)**
 
-## Quick Start
+## 🛠️ Local Setup
 
-1. [**OverLeaf.com**](https://www.overleaf.com/latex/templates/awesome-cv/tvmzpvdjfqxp)(formerly **WriteLaTeX.com**)
-2. [**ShareLaTeX.com**](https://www.sharelatex.com/templates/cv-or-resume/awesome-cv)
+To compile this resume on your local machine, follow these steps:
 
-**_Note:_ Above services do not guarantee up-to-date source code of Awesome CV**
+### 1. Install LaTeX
 
-## How to Use
-### Requirements
+Ensure you have a TeX distribution installed:
 
-A full TeX distribution is assumed.  [Various distributions for different operating systems (Windows, Mac, \*nix) are available](http://tex.stackexchange.com/q/55437) but TeX Live is recommended.
-You can [install TeX from upstream](http://tex.stackexchange.com/q/1092) (recommended; most up-to-date) or use `sudo apt-get install texlive-full` if you really want that.  (It's generally a few years behind.)
+- **macOS:** [MacTeX](https://tug.org/mactex/) or [BasicTeX](https://tug.org/mactex/morepackages.html)
+- **Linux:** `texlive-full`
+- **Windows:** [MiKTeX](https://miktex.org/)
 
-### Usage
+### 2. Install Required Packages
 
-At a command prompt, run
+If you are using a minimal distribution like BasicTeX, you might need to install these packages:
+
 ```bash
-$ xelatex {your-cv}.tex
+tlmgr install titlesec enumitem multicol pifont fontawesome5 fancyhdr xcolor etoolbox refcount calc setspace lipsum xparse relsize
 ```
-This should result in the creation of ``{your-cv}.pdf``
 
+### 3. Install Fonts
 
-## Credit
-### LaTeX
-LaTeX is a fantastic typesetting program that a lot of people use these days, especially the math and computer science people in academia.
+This resume uses the **TeX Gyre Heros** font. It should be included in most TeX distributions, but ensure it's available on your system.
 
-You can find out more about it here: [LaTeX Project](http://www.latex-project.org)
+## 🚀 How to Run
 
-### LaTeX-FontAwesome
-[LaTeX FontAwesome](https://github.com/furl/latex-fontawesome) is bindings for FontAwesome icons to be used in XeLaTeX.
+I've included a helper script to simplify the build process.
 
-### Roboto
-[Roboto](https://github.com/google/roboto) is the default font on Android and ChromeOS, and the recommended font for Google’s visual language, Material Design.
+### Using the Build Script
 
-### Source Sans Pro
-[Source Sans Pro](https://github.com/adobe-fonts/source-sans-pro) is a set of OpenType fonts that have been designed to work well in user interface (UI) environments.
+Run the following command in your terminal:
 
+```bash
+./build.sh
+```
 
-## Contact
-You are free to take my `.tex` file and modify it to create your own resume. Please don't use my resume for anything else without my permission, though!
+This script will:
 
-If you have any questions, feel free to join me at [`#posquit0` on Freenode](irc://irc.freenode.net/posquit0) and ask away. Click [here](https://kiwiirc.com/client/irc.freenode.net/posquit0) to connect.
+1. Compile the LaTeX source using `xelatex`.
+2. Generate the output as `Shubham_Mathur_Resume_2026.pdf`.
+3. Clean up all intermediate build files (`.aux`, `.log`, etc.).
 
-Good luck!
+### Manual Compilation
+
+If you prefer running it manually:
+
+```bash
+xelatex -jobname=Shubham_Mathur_Resume_2026 main.tex
+```
+
+## 📁 Repository Structure
+
+- `main.tex`: The main LaTeX source file.
+- `resume_config.cls`: Custom LaTeX class for styling and layout.
+- `build.sh`: Shell script for one-click compilation and cleanup.
+- `Shubham_Mathur_Resume_2026.pdf`: The final compiled resume.
