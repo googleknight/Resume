@@ -27,6 +27,7 @@
 
 \RequirePackage{fancyhdr}
 \RequirePackage[dvipsnames]{xcolor}
+\RequirePackage[normalem]{ulem}
 
 \RequirePackage{etoolbox,refcount}
 \RequirePackage{calc}
@@ -103,7 +104,7 @@
         }\\[2pt]
         \textcolor{black}{
             % Line 2: GitHub and Portfolio
-            \href{https://github.com/#6}{github.com/#6} \CustomBullet \href{#5}{#5}
+            \href{https://github.com/#6}{github.com/#6} \CustomBullet \href{https://#5}{#5}
         }
     \end{center}
     \vspace{-15pt}
@@ -142,3 +143,8 @@
                 #1
         \end{itemize}
 }
+
+% Body link style with subtle underline
+\renewcommand{\ULthickness}{0.6pt}
+\setlength{\ULdepth}{1.5pt}
+\newcommand{\bodylink}[2]{\href{#1}{\textcolor{NavyBlue}{\uline{\textcolor{black}{#2}}}}}
