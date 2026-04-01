@@ -29,10 +29,10 @@
     {Jan 2024 - Jan 2026}
     {Remote, India}
     {
-      \item[$\bullet$] \textbf{Strategic Compliance (Age Assurance):} Led cross-platform compliance strategy for \textbf{4.5M+ users} under the \textbf{UK Online Safety Act} and EU DSA, mitigating revenue risks (10\% of global turnover). Engineered a \textbf{Zero-Trust architecture} that eliminates SPI persistence via vendor-edge filtering, reducing GDPR liability by \textbf{100\%}. Designed ``Exemption Workflows'' to bypass verification for premium users, safeguarding high-value revenue streams from churn.
-      \item[$\bullet$] \textbf{Legacy Modernization Architecture (Identity):} Designed the architectural blueprint for ``Anumati,'' a \textbf{Golang} microservice to decouple authentication from the legacy PHP monolith. Reverse-engineered 15 years of undocumented logic to map the \textbf{Strangler Pattern} migration strategy and implemented core pre/post-login flows to prepare for system decomposition.
-      \item[$\bullet$] \textbf{Backend Scaling (User Deactivation Engine):} Re-architected the deactivation system using \textbf{Domain-Driven Design (DDD)} and \textbf{Asynchronous Queueing}. Scaled bulk processing capacity from 4K to \textbf{50K+ accounts} per batch, resolving HTTP timeouts. Reduced processing time by \textbf{99.9\%} (2 days to under 5 mins) and reconciled \textbf{195K+} inconsistent records.
-      \item[$\bullet$] \textbf{Security \& Observability:} Identified a critical MFA bypass flaw and \textbf{authored the design specification} for a Backup Recovery Code system. Hardened auth flows against XSS and Open Redirect vectors. Defined \textbf{SLOs}, instrumented Grafana dashboards achieving \textbf{0\%} data inconsistencies, and authored source-of-truth \textbf{technical specifications} for Compliance and Auth domains.
+      \item[$\bullet$] \textbf{Trust \& Safety Overhaul (User Lifecycle):} Sole technical owner, authored tech spec and re-architected a broken deactivation pipeline where \textbf{195K+ zombie accounts} could still log in (security \& GDPR risk). Designed \textbf{single source of truth} data model with \textbf{DDD} and \textbf{RabbitMQ-based async processing}, scaling bulk capacity from 4K to \textbf{50K+ accounts}. Reduced deactivation time from days to under \textbf{2 minutes}, cleaned \textbf{1M+ orphaned records}, and built \textbf{Grafana/PagerDuty} observability.
+      \item[$\bullet$] \textbf{Legacy Modernization (Identity):} Designed and implemented ``Anumati,'' a \textbf{Golang} authentication microservice with \textbf{REST and gRPC/Protobuf} APIs, decoupling auth from a legacy PHP monolith. Reverse-engineered 15 years of undocumented logic across \textbf{40+ integration points} to map the \textbf{Strangler Pattern} migration and implemented core auth infrastructure.
+      \item[$\bullet$] \textbf{Regulatory Compliance (Age Assurance):} Authored tech spec and built Vimeo's age verification platform across \textbf{5 platforms} (Web, iOS, Android, tvOS, Vision Pro) for \textbf{4.5M+ users} under the \textbf{UK Online Safety Act} and EU DSA, mitigating fines of up to \textbf{10\% of global revenue}. Conducted vendor POCs and engineered a \textbf{Zero-PII architecture}. Built capability-based \textbf{exemption workflows} to bypass verification for premium users, safeguarding revenue streams.
+      \item[$\bullet$] \textbf{Security \& Auth Hardening:} Identified a critical \textbf{MFA bypass vulnerability} and authored the design specification for a Backup Recovery Code system. Hardened auth flows against \textbf{XSS and Open Redirect} vectors. Established source-of-truth \textbf{technical specifications} for Compliance and Auth domains, setting engineering standards for the Identity team.
     }
 
 \WorkExperience
@@ -41,8 +41,8 @@
     {Nov 2021 - Jan 2024}
     {Bengaluru, India}
     {
-      \item[$\bullet$] Architected \textbf{GenAI-powered backend services} for enterprise banking IVR, designing secure OpenAI integration layers with PII redaction and stateful conversation orchestration using \textbf{NestJS}.
-      \item[$\bullet$] Built \textbf{event-driven medication adherence platform} using \textbf{Azure Functions and Twilio}, implementing fault-tolerant message routing and scheduling flows with \textbf{HIPAA-compliant} healthcare data handling at scale.
+      \item[$\bullet$] Architected \textbf{GenAI-powered backend services} for enterprise banking IVR using \textbf{NestJS}, designing secure \textbf{OpenAI integration layers} with \textbf{PII redaction (NER)}, \textbf{streaming responses}, and \textbf{stateful conversation orchestration} (Redis). Implemented \textbf{prompt engineering, intent detection}, and \textbf{hallucination guardrails} for real-time voice interactions in a highly regulated environment.
+      \item[$\bullet$] Built \textbf{event-driven medication adherence platform} using \textbf{Azure Functions, Azure Service Bus, and Twilio}, implementing fault-tolerant message routing and scheduling flows with \textbf{HIPAA-compliant} data handling. Engineered automated pharmacy refill triggers and multi-timezone notification routing for elderly care at scale.
       \item[$\bullet$] Optimized \textbf{NestJS microservices} serving \textbf{500K+ monthly users}, reducing API response times by \textbf{50\%} through caching and index optimization. Led architecture reviews, mentored 4 engineers, established API design standards, and drove CI/CD adoption across teams.
     }
 
@@ -53,7 +53,7 @@
     {Bengaluru, India}
     {
       \item[$\bullet$] Designed \textbf{microservices architecture} for Malaysian banking self-service platform serving \textbf{20M+ customers}, decomposing legacy SOAP integrations into \textbf{REST-based services}. Increased relationship manager productivity by \textbf{60\%} through workflow automation and API modernization.
-      \item[$\bullet$] Developed \textbf{insurance recommendation engine} for \textbf{1.3M users} using React and Node.js, improving operational efficiency by \textbf{90\%}. Built telecom customer platforms for \textbf{10M users}, increasing test coverage by \textbf{40\%} and strengthening session management reliability.
+      \item[$\bullet$] Developed \textbf{insurance recommendation engine} for \textbf{1.3M users} using React and Node.js, reducing manual underwriting workflows by \textbf{90\%}. Built telecom customer platforms for \textbf{10M users}, increasing test coverage by \textbf{40\%} and strengthening session security.
     }
 
 \section{\textcolor{NavyBlue}{Education}}
@@ -68,12 +68,13 @@
 
 \SkillList{
     \SkillItem{Open Source (PRs merged)}{: \bodylink{https://github.com/apple/password-manager-resources/pull/1019}{\textbf{Apple}/password-manager-resources}, \bodylink{https://github.com/transferwise/pipelinewise/pull/1263}{\textbf{Wise}/PipelineWise}, \bodylink{https://github.com/amruthpillai/reactive-resume/pull/1978}{Reactive Resume}}
-    \SkillItem{Languages}{: JavaScript, TypeScript, SQL; \textbf{Familiar:} Go (Golang), PHP, Java, Python}
+    \SkillItem{Languages}{: JavaScript, TypeScript, SQL; \textbf{Familiar:} PHP, Go (Golang), Python, Java}
+    \SkillItem{Backend}{: Node.js, Express.js, NestJS; \textbf{Familiar:} Spring Boot, FastAPI}
     \SkillItem{Frontend}{: React, Next.js, Tailwind, Web Security (CSP/XSS), Jest}
-    \SkillItem{Backend}{: Node.js, NestJS, Express.js; \textbf{Familiar:} Spring Boot, FastAPI}
-    \SkillItem{Databases}{: PostgreSQL, MySQL, Redis, MongoDB; TypeORM}
+    \SkillItem{Databases \& Data Warehouse}{: PostgreSQL, MySQL, Redis, MongoDB; \textbf{Familiar:} Snowflake, FoundationDB}
+    \SkillItem{Queues}{: Azure Service Bus, RabbitMQ; \textbf{Familiar:} Kafka}
     \SkillItem{Cloud \& DevOps}{: Docker, GitHub Actions, CircleCI; \textbf{Familiar:} AWS, Azure, GCP, Kubernetes, Grafana}
-    \SkillItem{Architecture}{: Microservices, DDD, Event-Driven, REST, GraphQL, gRPC, OAuth 2.0, Async Processing, Message Queues}
+    \SkillItem{AI/GenAI}{: Conversational AI, Agentic Workflows, Prompt Chaining, RAG, Function Calling, MCP Server, Vector Databases, Embeddings}
 }
 
 \end{document}

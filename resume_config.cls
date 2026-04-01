@@ -67,7 +67,7 @@
 \geometry{
     paper=a4paper,
     top=0.25in, 
-    bottom=0.25in,
+    bottom=0.2in,
     left=0.3in, 
     right=0.3in, 
     headheight=0.5cm,
@@ -77,11 +77,11 @@
 
 % section title format
 \titleformat{\section}%
-    {\vspace{-4pt}\scshape\raggedright\large\bfseries}% format
+    {\vspace{-6pt}\scshape\raggedright\large\bfseries}% format
     {}% label
     {0em}% space between label and title
     {}% before code
-    [\color{NavyBlue}\titlerule\vspace{-5pt}]% after code
+    [\color{NavyBlue}\titlerule\vspace{-6pt}]% after code
 
 %-------------------------------------------------------------------------------
 %                Custom Commands
@@ -97,15 +97,8 @@
 \NewDocumentCommand{\Header}{m m m m m m }{
     \fancyhf{}
     \begin{center}
-        {\Huge\textbf{\textsc{\textcolor{NavyBlue}{#1}}}}\\[3pt]
-        \textcolor{black}{
-            % Line 1: Phone, Email, LinkedIn
-            #2 \CustomBullet \href{mailto:#3}{#3} \CustomBullet \href{https://linkedin.com/in/#4}{linkedin.com/in/#4}
-        }\\[2pt]
-        \textcolor{black}{
-            % Line 2: GitHub and Portfolio
-            \href{https://github.com/#6}{github.com/#6} \CustomBullet \href{https://#5}{#5}
-        }
+        {\LARGE\textbf{\textsc{\textcolor{NavyBlue}{#1}}}}\\[2pt]
+        {\small #2 \CustomBullet \href{mailto:#3}{#3} \CustomBullet \href{https://linkedin.com/in/#4}{linkedin.com/in/#4} \CustomBullet \href{https://#5}{#5}}
     \end{center}
     \vspace{-15pt}
 }
@@ -130,16 +123,13 @@
 
 \newcommand{\EducationExperience}[4]{
     \noindent
-    \begin{tabular*}{\textwidth}{@{}l @{\extracolsep{\fill}} r}
-    \textbf{#1} & \textit{#3} \\
-        #2 & #4 \\
-    \end{tabular*}
+    \textbf{#1} $|$ {#2} \hfill {#4} $|$ \textit{#3}\vspace{2pt}
 }
 
 \newcommand{\SkillItem}[2]{\item \textbf{#1}{#2}}
 
 \newcommand{\SkillList}[1]{
-    \begin{itemize}[label={}, itemsep=-0.2em, leftmargin=0em]
+    \begin{itemize}[label={}, itemsep=-0.3em, leftmargin=0em]
                 #1
         \end{itemize}
 }
