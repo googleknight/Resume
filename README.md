@@ -1,65 +1,21 @@
-# Shubham Mathur - Resume
+# Resume — Shubham Mathur
 
-This repository contains the LaTeX source code for my professional resume. It is designed to be easily compiled locally into a high-quality PDF.
+Source-controlled resume content and builds.
 
-## 📄 View Resume
+## Layout
 
-You can view or download the latest version of my resume here:  
-👉 **[Shubham_Mathur_Resume_2026.pdf](./Shubham_Mathur_Resume_2026.pdf)**
+| Path                        | What it is                                                                                                     |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `Shubham_Mathur_Resume.tex` | **Current resume source** (Jake's template, ATS-optimized single column). Build → `Shubham_Mathur_Resume.pdf`. |
+| `Shubham_Mathur_Resume.pdf` | Current one-page master PDF (Senior Software Engineer) — the file you send.                                    |
+| `build.sh`                  | Builds the PDF from the source (`pdflatex` ×2 + cleanup).                                                      |
+| `resume_reference.md`       | Full inventory of real, defensible material — for tailoring, intros, and interview prep. Not for submission.   |
+| `legacy/`                   | Previous resume code (`main.tex`, `resume_config.cls`, `build.sh`, `Shubham_Mathur_Resume_2026.pdf`).          |
 
-## 🛠️ Local Setup
-
-To compile this resume on your local machine, follow these steps:
-
-### 1. Install LaTeX
-
-Ensure you have a TeX distribution installed:
-
-- **macOS:** [MacTeX](https://tug.org/mactex/) or [BasicTeX](https://tug.org/mactex/morepackages.html)
-- **Linux:** `texlive-full`
-- **Windows:** [MiKTeX](https://miktex.org/)
-
-### 2. Install Required Packages
-
-If you are using a minimal distribution like BasicTeX, you might need to install these packages:
+## Build
 
 ```bash
-tlmgr install titlesec enumitem multicol pifont fontawesome5 fancyhdr xcolor etoolbox refcount calc setspace lipsum xparse relsize
+./build.sh                     # produces Shubham_Mathur_Resume.pdf (one page)
 ```
 
-### 3. Install Fonts
-
-This resume uses the **TeX Gyre Heros** font. It should be included in most TeX distributions, but ensure it's available on your system.
-
-## 🚀 How to Run
-
-I've included a helper script to simplify the build process.
-
-### Using the Build Script
-
-Run the following command in your terminal:
-
-```bash
-./build.sh
-```
-
-This script will:
-
-1. Compile the LaTeX source using `xelatex`.
-2. Generate the output as `Shubham_Mathur_Resume_2026.pdf`.
-3. Clean up all intermediate build files (`.aux`, `.log`, etc.).
-
-### Manual Compilation
-
-If you prefer running it manually:
-
-```bash
-xelatex -jobname=Shubham_Mathur_Resume_2026 main.tex
-```
-
-## 📁 Repository Structure
-
-- `main.tex`: The main LaTeX source file.
-- `resume_config.cls`: Custom LaTeX class for styling and layout.
-- `build.sh`: Shell script for one-click compilation and cleanup.
-- `Shubham_Mathur_Resume_2026.pdf`: The final compiled resume.
+Requires a TeX distribution (TeX Live). Build artifacts (`*.aux`, `*.log`, `*.out`) are gitignored.

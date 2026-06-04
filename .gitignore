@@ -14,6 +14,7 @@
 
 # Ignore all PDFs except the main resume
 *.pdf
+!Shubham_Mathur_Resume.pdf
 !Shubham_Mathur_Resume_2026.pdf
 
 # Directory for output if configured

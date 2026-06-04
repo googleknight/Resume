@@ -1,0 +1,170 @@
+%-------------------------
+% Resume in Latex
+% Based on Jake Gutierrez's template (MIT License)
+% ATS-optimized: single column, standard headings, machine-readable text
+%-------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[top=0.35in,bottom=0.3in,left=0.45in,right=0.45in]{geometry}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\IfFileExists{glyphtounicode.tex}{\input{glyphtounicode}}{}
+
+% PDF metadata (shown in viewers/tabs, read by ATS & document systems)
+\hypersetup{
+  pdftitle={Shubham Mathur - Senior Software Engineer Resume},
+  pdfauthor={Shubham Mathur},
+  pdfsubject={Resume - Senior Software Engineer},
+  pdfkeywords={Software Engineer, Senior Software Engineer, Backend, Distributed Systems, Identity, Authentication, Security, GenAI, RAG, LLM, Go, TypeScript, Node.js, NestJS, Microservices, PostgreSQL, Redis, GCP, Event-Driven},
+  pdflang={en-US}
+}
+
+% Page layout
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Ensure that generated pdf is machine readable / ATS friendly
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=1pt, topsep=3pt, parsep=0pt, partopsep=0pt, leftmargin=0.18in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Shubham Mathur} \\ \vspace{3pt}
+    {\large Senior Software Engineer} \\ \vspace{5pt}
+    \small
+    +91-9443129941 ~ $|$ ~
+    \href{mailto:shubham.mathur.wrk@gmail.com}{shubham.mathur.wrk@gmail.com} ~ $|$ ~
+    \href{https://linkedin.com/in/shubham-mathur-biz}{linkedin.com/in/shubham-mathur-biz} ~ $|$ ~
+    \href{https://github.com/googleknight}{github.com/googleknight} ~ $|$ ~
+    \href{https://googleknight.github.io}{googleknight.github.io}
+\end{center}
+
+%----------SUMMARY----------
+\vspace{-6pt}
+\small{Senior Software Engineer with 8+ years in backend and distributed systems, deep in \textbf{identity/auth, security, and production GenAI}. Architected compliance and auth platforms for \textbf{4.5M+ users} and built and shipped an enterprise \textbf{RAG} assistant. Work AI-natively -- \textbf{agentic, plan-driven development with Claude Code} (subagent orchestration, MCP tooling) across planning, debugging, implementation, and review. Open-source contributor at \textbf{Stripe, Apple, and Wise}.}
+\vspace{-2pt}
+
+%----------EXPERIENCE----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Staff Software Engineer}{Apr 2026 -- Present}
+      {CivilGrid}{Remote, India}
+      \resumeItemListStart
+        \resumeItem{\textbf{Engineering leadership:} Helping hire and scale CivilGrid's India engineering team and set engineering and testing standards across the product.}
+        \resumeItem{\textbf{Architecture leadership:} Led migration of a static configuration system (around 214 configs) to a database-driven, feature-flagged, Redis-cached architecture with parity-checking -- owning the dependency mapping and data-access contract.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Senior Software Engineer}{Jan 2024 -- Jan 2026}
+      {Vimeo}{Remote, India}
+      \resumeItemListStart
+        \resumeItem{\textbf{Regulatory compliance (Age Assurance):} Lead developer and architect -- designed and built Vimeo's Zero-PII age-verification platform (5 platforms, \textbf{4.5M+ users}), shielding the company from UK OSA / EU DSA fines of up to \textbf{10\% of global revenue}; built the analytics that drove C-level rollout decisions, accelerating compliance by around 20 days.}
+        \resumeItem{\textbf{Identity modernization:} Designed and built a Go auth microservice (REST + gRPC) to carve auth out of a 15-year PHP monolith -- a Strangler migration mapping \textbf{40+ integration points}; found and fixed a critical MFA-bypass plus XSS/open-redirect flaws.}
+        \resumeItem{\textbf{Trust \& Safety:} Sole owner -- re-architected a broken user-deactivation pipeline (\textbf{195K+} ``zombie'' accounts still able to log in; GDPR risk) into a DDD + RabbitMQ system: cut processing from days to \textbf{under 2 minutes}, scaled 4K to 50K+ accounts/batch, and reconciled 1M+ orphaned records.}
+        \resumeItem{\textbf{Applied GenAI:} Built and shipped VimeoIQ, an internal \textbf{RAG assistant} (GCP, Vertex AI Gemini, Vector Search) answering employee questions over Google Docs for India and US engineering teams -- with source citations, confidence scoring, and pre-LLM PII scrubbing.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Engineer 2}{Nov 2021 -- Jan 2024}
+      {McKinsey \& Company -- McKinsey Digital (product engineering, not advisory)}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{\textbf{Early GenAI (banking IVR):} Designed and built a conversational GenAI backend for enterprise banking IVR (NestJS, OpenAI) -- secure LLM integration with PII redaction, stateful multi-turn conversation orchestration (Redis), intent detection, and hallucination and prompt-injection guardrails for real-time voice.}
+        \resumeItem{\textbf{Healthcare platform:} Built the reliable SMS reminder system (event-driven Azure Functions + Service Bus + Twilio, fault-tolerant, multi-timezone scheduling) plus frontend business flows and login/signup for a HIPAA-compliant medication-adherence app -- which contributed to a \textbf{34\% drop in hospital readmissions}.}
+        \resumeItem{\textbf{Scale \& leadership:} Cut API latency \textbf{50\%} on services for \textbf{500K+ users}; led architecture reviews, mentored 4 engineers, and set API and CI/CD standards.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Engineer 1}{Jul 2018 -- Nov 2021}
+      {McKinsey \& Company}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{\textbf{Multi-client scale:} Delivered platforms for banking, insurance, and telecom clients across Malaysia, Singapore, Thailand, and the US (up to \textbf{20M+ users}); advanced from intern to Engineer 1.}
+        \resumeItem{\textbf{Identity \& distributed systems:} Built RBAC/ACLs and Okta SSO for a consultant engagement platform (GraphQL/PostgreSQL, MVP to org-wide); built REST microservices over legacy government-agency SOAP integrations for a Malaysian bank (+60\% RM productivity).}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%----------OPEN SOURCE----------
+\section{Open Source}
+\resumeSubHeadingListStart
+  \resumeItem{\textbf{Merged PRs:} \href{https://github.com/stripe/link-cli/pull/95}{\underline{Stripe / link-cli}} ~$\cdot$~ \href{https://github.com/apple/password-manager-resources/pull/1019}{\underline{Apple / password-manager-resources}} ~$\cdot$~ \href{https://github.com/transferwise/pipelinewise/pull/1263}{\underline{Wise / PipelineWise}} ~$\cdot$~ \href{https://github.com/amruthpillai/reactive-resume/pull/1978}{\underline{Reactive Resume}}}
+\resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%----------SKILLS----------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages:} JavaScript, TypeScript, SQL ~|~ \textit{Familiar:} Go, PHP, Python, Java \\
+    \textbf{Backend:} Node.js, NestJS, Express.js ~|~ \textit{Familiar:} Spring Boot, FastAPI \\
+    \textbf{Frontend:} React, Next.js, Tailwind, Jest, Web Security (CSP/XSS) \\
+    \textbf{Data:} PostgreSQL, MySQL, Redis, MongoDB ~|~ \textit{Familiar:} Snowflake, FoundationDB \\
+    \textbf{Messaging:} RabbitMQ, Azure Service Bus ~|~ \textit{Familiar:} Kafka \\
+    \textbf{Cloud \& DevOps:} Docker, GitHub Actions, GCP (Cloud Run, Vertex AI) ~|~ \textit{Familiar:} AWS, Azure, Kubernetes\\
+    \textbf{AI / GenAI:} RAG, LLM orchestration, prompt engineering, embeddings \& vector search, function calling, PII \& prompt-injection guardrails \\
+    \textbf{AI Dev Tooling:} Claude Code -- agentic, plan-driven development with subagent orchestration and MCP tooling across spec, debugging, implementation, and code review \\
+    \textbf{Architecture:} Microservices, DDD, Event-Driven, gRPC, REST/GraphQL, OAuth2/JWT, Observability
+  }}
+\end{itemize}
+\vspace{-12pt}
+
+%----------EDUCATION----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Vellore Institute of Technology}{2018}
+      {B.Tech, Information Technology}{Vellore, India}
+  \resumeSubHeadingListEnd
+
+\end{document}

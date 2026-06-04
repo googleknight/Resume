@@ -1,23 +1,19 @@
 #!/bin/bash
+# Build the resume PDF from the LaTeX source.
+# Usage: ./build.sh
 
-# Configuration
-OUTPUT_NAME="Shubham_Mathur_Resume_2026"
+set -e
 
-echo "🚀 Starting resume build..."
+SRC="Shubham_Mathur_Resume.tex"
+PDF="Shubham_Mathur_Resume.pdf"
 
-# Run latexmk
-# -xelatex: Use XeLaTeX engine
-# -interaction=nonstopmode: Don't stop for errors
-# -jobname: Specify output filename
-latexmk -xelatex -interaction=nonstopmode -jobname="$OUTPUT_NAME" main.tex
+echo "🚀 Building resume..."
 
-if [ $? -eq 0 ]; then
-    echo "✅ Build successful!"
-    echo "🧹 Cleaning up temporary files..."
-    latexmk -c -jobname="$OUTPUT_NAME" main.tex
-    rm -f "$OUTPUT_NAME.xdv"
-    echo "✨ Done! Output: $OUTPUT_NAME.pdf"
-else
-    echo "❌ Build failed. Check main.log for details."
-    exit 1
-fi
+# Run twice so the layout settles (titlesec / fancyhdr).
+pdflatex -interaction=nonstopmode -halt-on-error "$SRC" > /dev/null
+pdflatex -interaction=nonstopmode -halt-on-error "$SRC" > /dev/null
+
+# Clean up LaTeX build artifacts.
+rm -f Shubham_Mathur_Resume.{aux,log,out,fls,fdb_latexmk,synctex.gz}
+
+echo "✅ Done! Output: $PDF"
