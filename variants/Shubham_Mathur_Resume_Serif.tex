@@ -1,101 +1,83 @@
 %-------------------------
-% Resume in Latex
-% Based on Jake Gutierrez's template (MIT License)
-% ATS-optimized: single column, standard headings, machine-readable text
+% Resume variant: Modern serif + accent
+% XeLaTeX. Single column, ATS-safe. TeX Gyre Pagella (Palatino-style) serif body,
+% navy accent on name + section rules.
+% Build: ./build.sh  (or: xelatex Shubham_Mathur_Resume_Serif.tex)
 %-------------------------
-
 % !TEX program = xelatex
 \documentclass[letterpaper,10pt]{article}
 
 \usepackage{fontspec}
-\setmainfont{texgyreheros}[ % Helvetica-style clean sans
-  Extension      = .otf,
-  Scale          = 1,
-  UprightFont    = *-regular,
-  BoldFont       = *-bold,
-  ItalicFont     = *-italic,
+\setmainfont{texgyrepagella}[
+  Extension    = .otf,
+  Scale        = 0.94,
+  UprightFont  = *-regular,
+  BoldFont     = *-bold,
+  ItalicFont   = *-italic,
   BoldItalicFont = *-bolditalic,
 ]
-\usepackage{latexsym}
-\usepackage[top=0.3in,bottom=0.3in,left=0.3in,right=0.3in]{geometry}
+\usepackage[top=0.32in,bottom=0.25in,left=0.42in,right=0.42in]{geometry}
 \usepackage{titlesec}
-\usepackage[usenames,dvipsnames]{xcolor}
-\definecolor{accent}{HTML}{2557A7} % readable medium blue
-\usepackage{verbatim}
 \usepackage{enumitem}
+\usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-\usepackage[english]{babel}
 \usepackage{tabularx}
 
-% PDF metadata (shown in viewers/tabs, read by ATS & document systems)
+\definecolor{accent}{HTML}{2557A7} % readable medium blue
+
 \hypersetup{
   pdftitle={Shubham Mathur - Senior Software Engineer Resume},
   pdfauthor={Shubham Mathur},
   pdfsubject={Resume - Senior Software Engineer},
-  pdfkeywords={Software Engineer, Senior Software Engineer, Backend, Distributed Systems, Identity, Authentication, Security, GenAI, RAG, LLM, Go, TypeScript, Node.js, NestJS, Microservices, PostgreSQL, Redis, GCP, Event-Driven},
+  pdfkeywords={Software Engineer, Senior Software Engineer, Full Stack, Backend, Distributed Systems, Identity, Authentication, Security, GenAI, RAG, LLM, Go, TypeScript, Node.js, NestJS, Microservices, PostgreSQL, Redis, GCP, Event-Driven},
   pdflang={en-US}
 }
 
-% Page layout
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
 \urlstyle{same}
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Section formatting
-\titleformat{\section}{
-  \vspace{-7pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+% Section heading: colored, bold, with a thin accent rule
+\titleformat{\section}
+  {\vspace{-4pt}\large\bfseries\color{accent}}
+  {}{0em}{}[\vspace{-3pt}{\color{accent}\titlerule[1pt]}\vspace{-6pt}]
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textbf{\small \textcolor{accent}{#3}} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\small #2} \\
+      {\small\color{accent}\textbf{#3}} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
 }
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=1pt, topsep=3pt, parsep=0pt, partopsep=0pt, leftmargin=0.18in]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0pt, topsep=2pt, parsep=0pt, partopsep=0pt, leftmargin=0.18in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
 
-%----------HEADING----------
-\begin{center}
-    {\Huge \scshape Shubham Mathur} \\ \vspace{3pt}
-    {\large Senior Software Engineer} \\ \vspace{5pt}
-    \footnotesize
-    +91-9443129941 ~$|$~
-    \href{mailto:shubham.mathur.wrk@gmail.com}{shubham.mathur.wrk@gmail.com} ~$|$~
-    \href{https://linkedin.com/in/shubham-mathur-biz}{linkedin.com/in/shubham-mathur-biz} ~$|$~
-    \href{https://github.com/googleknight}{github.com/googleknight} ~$|$~
-    \href{https://googleknight.github.io}{googleknight.github.io}
-\end{center}
-\vspace{-10pt}
+%----------HEADING (left-aligned)----------
+{\Huge\bfseries\color{accent} Shubham Mathur}\\[2pt]
+{\large Senior Software Engineer}\\[4pt]
+{\small
++91-9443129941 ~$|$~
+\href{mailto:shubham.mathur.wrk@gmail.com}{shubham.mathur.wrk@gmail.com} ~$|$~
+\href{https://linkedin.com/in/shubham-mathur-biz}{linkedin.com/in/shubham-mathur-biz} ~$|$~
+\href{https://github.com/googleknight}{github.com/googleknight} ~$|$~
+\href{https://googleknight.github.io}{googleknight.github.io}}
+\vspace{2pt}
 
 %----------SUMMARY----------
 \section{Summary}
@@ -126,7 +108,7 @@
 
     \resumeSubheading
       {Engineer 2}{Nov 2021 -- Jan 2024}
-      {McKinsey \& Company}{Bengaluru, India}
+      {McKinsey \& Company, McKinsey Digital}{Bengaluru, India}
       \resumeItemListStart
         \resumeItem{\textbf{Early GenAI (banking IVR):} Designed and built a full-stack conversational GenAI application for enterprise banking IVR (NestJS, OpenAI; web, backend, and DevOps): LLM integration with PII redaction, stateful multi-turn orchestration (Redis), intent detection, and prompt-injection guardrails for real-time voice.}
         \resumeItem{\textbf{Healthcare platform:} Built the reliable SMS reminder system (event-driven Azure Functions + Service Bus + Twilio, fault-tolerant, multi-timezone scheduling) plus frontend business flows and login/signup for a HIPAA-compliant medication-adherence app, which contributed to a \textbf{34\% drop in hospital readmissions}.}
@@ -159,7 +141,7 @@
     \textbf{Frontend:} React, Next.js, Tailwind, Jest, Web Security (CSP/XSS) \\
     \textbf{Data:} PostgreSQL, MySQL, Redis, MongoDB ~$|$~ \textit{Familiar:} Snowflake \\
     \textbf{Messaging:} RabbitMQ, Azure Service Bus ~$|$~ \textit{Familiar:} Kafka \\
-    \textbf{Cloud \& DevOps:} Docker, GitHub Actions, GCP (Cloud Run, Vertex AI) ~$|$~ \textit{Familiar:} AWS, Azure, Kubernetes\\
+    \textbf{Cloud \& DevOps:} Docker, GitHub Actions, GCP (Cloud Run, Vertex AI) ~$|$~ \textit{Familiar:} AWS, Azure, Kubernetes \\
     \textbf{AI / GenAI:} RAG, LLM orchestration, prompt engineering, embeddings \& vector search, function calling, PII \& prompt-injection guardrails \\
     \textbf{AI Dev Tooling:} Claude Code, Cursor (agentic, plan-driven development; subagent orchestration, MCP tooling) \\
     \textbf{Architecture:} Microservices, DDD, Event-Driven, gRPC, REST/GraphQL, OAuth2/JWT, Observability

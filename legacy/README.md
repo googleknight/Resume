@@ -5,7 +5,7 @@ This repository contains the LaTeX source code for my professional resume. It is
 ## 📄 View Resume
 
 You can view or download the latest version of my resume here:  
-👉 **[Shubham_Mathur_Resume_2026.pdf](./Shubham_Mathur_Resume_2026.pdf)**
+👉 **[Shubham_Mathur_Resume_Legacy.pdf](./Shubham_Mathur_Resume_Legacy.pdf)**
 
 ## 🛠️ Local Setup
 
@@ -46,7 +46,7 @@ Run the following command in your terminal:
 This script will:
 
 1. Compile the LaTeX source using `xelatex`.
-2. Generate the output as `Shubham_Mathur_Resume_2026.pdf`.
+2. Generate the output as `Shubham_Mathur_Resume_Legacy.pdf`.
 3. Clean up all intermediate build files (`.aux`, `.log`, etc.).
 
 ### Manual Compilation
@@ -54,12 +54,12 @@ This script will:
 If you prefer running it manually:
 
 ```bash
-xelatex -jobname=Shubham_Mathur_Resume_2026 main.tex
+xelatex -jobname=Shubham_Mathur_Resume_Legacy Shubham_Mathur_Resume_Legacy.tex
 ```
 
 ## 📁 Repository Structure
 
-- `main.tex`: The main LaTeX source file.
+- `Shubham_Mathur_Resume_Legacy.tex`: The main LaTeX source file.
 - `resume_config.cls`: Custom LaTeX class for styling and layout.
 - `build.sh`: Shell script for one-click compilation and cleanup.
-- `Shubham_Mathur_Resume_2026.pdf`: The final compiled resume.
+- `Shubham_Mathur_Resume_Legacy.pdf`: The final compiled resume.

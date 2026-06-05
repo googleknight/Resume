@@ -12,10 +12,11 @@
 *.run.xml
 *.bcf
 
-# Ignore all PDFs except the main resume
+# Ignore all PDFs except the resume builds
 *.pdf
 !Shubham_Mathur_Resume.pdf
-!Shubham_Mathur_Resume_2026.pdf
+!Shubham_Mathur_Resume_Serif.pdf
+!Shubham_Mathur_Resume_Legacy.pdf
 
 # Directory for output if configured
 %OUTDIR%/
